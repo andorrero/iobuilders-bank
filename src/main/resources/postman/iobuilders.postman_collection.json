@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "b97bd857-400e-409e-b81e-28f36a52d8a3",
+		"name": "iobuilders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6IkpvaG4gRG9lIiwiZ3JvdXBzIjpbIlVTRVIiXSwiYmlydGhkYXRlIjoiMjAwMS0wNy0xMyIsImlhdCI6MTY3NTI1Njk0NCwiZXhwIjoxNjc1MjU3MjQ0LCJqdGkiOiI0YjQ3NjIzNC1jNzhkLTQxYWItYTlkMC05MjkwNGZiOTI2OTgifQ.A-kLGOPn3mseQErH8YzGRoItT250ytTl07zCaEwA1dbIhI7nW-RcrsetFO2rE9iDSs8Vnqfr_nQLJsGq-2F8COcrKKnIhM5zpXKDhTRaHp2-J0C6kX_3rhft-DjE5cbpd7HdvdTmfMclCv63-CRXsl5Y0ornbk3kLttTvx2Z6bNcPZLSvFmB-lg-JwKz_ZDvND7vEi9sys4zkrGzh86U8gWW8YB-L-mX5BURnJpU-6eH3e_kBoJlcVN5GTqNAAI-4XLnhRspEby1fQNzjsKZkDVOwAuO6ISFbDIhG9qokWHQh1XXaG3ihbDquN8JaO6FrFaeJNRPQa0Lu8fmOTTUag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ownerId\": \"d49a2f9c-f4b9-44ac-a7a4-274a4591d01a\",\n    \"iban\": \"ES1234123412344567\",\n    \"currency\": \"EUR\",\n    \"amount\": 100\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/bank/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Wallet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6IkpvaG4gRG9lIiwiZ3JvdXBzIjpbIlVTRVIiXSwiYmlydGhkYXRlIjoiMjAwMS0wNy0xMyIsImlhdCI6MTY3NTExOTc2NiwiZXhwIjoxNjc1MTIwMDY2LCJqdGkiOiI0NDk1MGRlZC1iOWRlLTQ0ODEtOWFlNC04NDA5ODE0MDUyNTIifQ.UWusrc3BoU7iN2eMUQcs0S1JhoWFcNeMjVPA7ZGn3QDyYTzmdMgNViOF3c94QXqCuiquIYb8GODjj83MwmxeYlGZNjhIETEEIUEEg6nU-nUdQfYeaDayObdiUqOTcW417KgnBg-kcuxfXMrI9glzta3dDCF-HhgLZljBZzVSu1DfA9rfsTU5d8hsng6gEb3DQ_5cEfAo25ViWuxiLdeaPJv2bnhfSuptTbmolI-twKx_qf3vdYGN6RZotJXR1-sTKjTD9ifv9z4Bx1I7Kuo4MsViUuGwVP_7_WVQv5Fyp4vAKHzMa193drcRTd60zm74ia1PN93pDvm9E9uQRhqx4g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/bank/wallet/45feae4c-f0f3-4297-931b-007e4a9388cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"wallet",
+						"45feae4c-f0f3-4297-931b-007e4a9388cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Wallet Deposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6IkpvaG4gRG9lIiwiZ3JvdXBzIjpbIlVTRVIiXSwiYmlydGhkYXRlIjoiMjAwMS0wNy0xMyIsImlhdCI6MTY3NTI1Njk0NCwiZXhwIjoxNjc1MjU3MjQ0LCJqdGkiOiI0YjQ3NjIzNC1jNzhkLTQxYWItYTlkMC05MjkwNGZiOTI2OTgifQ.A-kLGOPn3mseQErH8YzGRoItT250ytTl07zCaEwA1dbIhI7nW-RcrsetFO2rE9iDSs8Vnqfr_nQLJsGq-2F8COcrKKnIhM5zpXKDhTRaHp2-J0C6kX_3rhft-DjE5cbpd7HdvdTmfMclCv63-CRXsl5Y0ornbk3kLttTvx2Z6bNcPZLSvFmB-lg-JwKz_ZDvND7vEi9sys4zkrGzh86U8gWW8YB-L-mX5BURnJpU-6eH3e_kBoJlcVN5GTqNAAI-4XLnhRspEby1fQNzjsKZkDVOwAuO6ISFbDIhG9qokWHQh1XXaG3ihbDquN8JaO6FrFaeJNRPQa0Lu8fmOTTUag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 100,\n    \"concept\": \"cash\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/bank/wallet/5f408735-f1ec-4726-8d43-68246cb98bb2/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"wallet",
+						"5f408735-f1ec-4726-8d43-68246cb98bb2",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Wallet Transference",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6IkpvaG4gRG9lIiwiZ3JvdXBzIjpbIlVTRVIiXSwiYmlydGhkYXRlIjoiMjAwMS0wNy0xMyIsImlhdCI6MTY3NTExOTc2NiwiZXhwIjoxNjc1MTIwMDY2LCJqdGkiOiI0NDk1MGRlZC1iOWRlLTQ0ODEtOWFlNC04NDA5ODE0MDUyNTIifQ.UWusrc3BoU7iN2eMUQcs0S1JhoWFcNeMjVPA7ZGn3QDyYTzmdMgNViOF3c94QXqCuiquIYb8GODjj83MwmxeYlGZNjhIETEEIUEEg6nU-nUdQfYeaDayObdiUqOTcW417KgnBg-kcuxfXMrI9glzta3dDCF-HhgLZljBZzVSu1DfA9rfsTU5d8hsng6gEb3DQ_5cEfAo25ViWuxiLdeaPJv2bnhfSuptTbmolI-twKx_qf3vdYGN6RZotJXR1-sTKjTD9ifv9z4Bx1I7Kuo4MsViUuGwVP_7_WVQv5Fyp4vAKHzMa193drcRTd60zm74ia1PN93pDvm9E9uQRhqx4g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"walletOriginId\": \"38b682d2-10b9-4031-a393-a7a9206a4654\",\n    \"walletDestId\": \"45feae4c-f0f3-4297-931b-007e4a9388cb\",\n    \"amount\": 500,\n    \"concept\": \"credit\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/bank/wallet/transference",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"wallet",
+						"transference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImFkbWluIiwiZ3JvdXBzIjpbIkFETUlOIiwiVVNFUiJdLCJiaXJ0aGRhdGUiOiIyMDAxLTA3LTEzIiwiaWF0IjoxNjc1MjU2OTI4LCJleHAiOjE2NzUyNTcyMjgsImp0aSI6IjU1YjkyOWYzLWQ3MzItNDRlMi05ZTg2LWIxMWUwMTQ5ZTJhNSJ9.Y4MkTKNRPYYiagHeL3X_t_7zyoUns-w8--V5ZakLNDJpNzMV3_A-4DSmCXc7pInV89FOfCAn5btitbX5Sy26OrLhJSxUAtFDrCd3fhQO3B-7V7qyq6rZzWkZ8TiRNhn1UPRQBfutih2VavINVwbQhKqP-WfpBheB7ACoMw6LT8slz5HRGdMQ-v1PeyhedIa451aGjXx3PEBxuNdNXteEuKcfCNRgdwO61cGX1HW5OQNFH1s3cKgQVQGfWKbevLeX-ZEQeHRh1hlJydauyaz_Hi3JxJO2SvAgU3xGUwU34TBEW_ozKiU78siPeGtEOTtVt0XaUpul0KKvWl3TKBKoJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"username\": \"jdoe\",\n    \"password\": \"secret\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/bank/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/bank/user/5dc99cdc-9793-4476-9778-efdb34c1537c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"user",
+						"5dc99cdc-9793-4476-9778-efdb34c1537c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/bank/login?username=jdoe&password=secret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "jdoe"
+						},
+						{
+							"key": "password",
+							"value": "secret"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as Admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/bank/login?username=admin&password=secret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"bank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "secret"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
